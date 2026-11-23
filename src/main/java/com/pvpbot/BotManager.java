@@ -175,7 +175,7 @@ public final class BotManager {
                 if (d < 10 && b.cooldown == 0) {
                     MinecartTNT cart = new MinecartTNT(EntityType.TNT_MINECART, lvl);
                     cart.setPos(t.getX(), t.getY(), t.getZ());
-                    cart.primeFuse();
+cart.primeFuse(lvl.damageSources().generic());
                     lvl.addFreshEntity(cart);
                     b.cooldown = cd * 3;
                 }
